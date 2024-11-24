@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ title }}</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <!-- Bootstrap and Custom CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' />
+    <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Thasadith:400,400i,700,700i&subset=latin-ext,thai,vietnamese" rel="stylesheet">
+
+    <style>
+        /* General Styling */
+        html, body {
+            font-size: 1rem;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: #333333 !important; /* Blackish-grey color */
+            padding: 0.8rem 1rem;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff !important;
+            font-weight: bold;
+        }
+
+        .navbar-brand {
+			font-style: Georgia;
+            font-weight: bold;
+            color: #ffffff !important;
+            font-size: 1.2rem;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333333; /* Blackish-grey color */
+            color: white;
+            padding: 20px 10px;
+            margin-top: 20px;
+        }
+
+        footer .container {
+            max-width: 600px;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .footer-text {
+            font-size: 0.9rem;
+            color: #e0f7fa;
+        }
+
+        .footer-text p {
+            margin: 0;
+        }
+
+        /* Add padding to the bottom of the page content to avoid footer overlap */
+        .content {
+            padding-bottom: 60px; /* Adjust based on footer height */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('home') }}">PlantPulse
+			
+			</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('crop_recommend') }}">Crop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('fertilizer_recommendation') }}">Fertilizer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('disease_prediction') }}">Disease</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="content">
+        {% block body %} {% endblock %}
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <h2 class="footer-logo">PlantPulse</h2>
+			<div class="footer-text">
+				<!-- Light-colored "Made by BitBlitz" text -->
+				<p style="color: #cccccc; font-size: 0.9rem;">Made by BitBlitz with 💗</p>
+			</div>
+          
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,231 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<style>
+  html body {
+    background-color: #e0f7fa;
+    font-family: Arial, sans-serif;
+  }
+  
+/* Change color of specific labels */
+label[for="Nitrogen"],
+label[for="Phosphorous"],
+label[for="Pottasium"],
+label[for="crop"] {
+  color: #004d40; /* Apply the desired color */
+}
+  /* Flexbox container for the image and form */
+  .container-flex {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px; /* Space between image container and form container */
+    margin-top: -10px; /* Adds space below the h1 */
+    position: relative;
+  }
+
+  /* Image container */
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 50%; /* Ensures the images take up half the space */
+    margin-left: 100px; /* Shifts images to the right */
+    position: relative;
+  }
+
+  .image-box {
+    width: 400px;
+    height: 200px;
+    background-color: #f1f8e9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+
+  /* Aligning the images alternately */
+  .image-box:nth-child(odd) {
+    margin-left: 0; /* Align left for odd items */
+  }
+
+  .image-box:nth-child(even) {
+    margin-left: 50px; /* Align right for even items */
+  }
+
+  .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  /* Container for the form */
+  .form-container {
+    width: 450px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    border: 2px solid #388e3c;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    color: black;
+    position: absolute; /* Places the form container next to the middle image */
+    top: 50%; /* Aligns the form vertically with the middle image */
+    left: 50%; /* Positions the form right after the middle image */
+    transform: translateY(-50%); /* Adjusts to center the form vertically */
+  }
+
+  /* Style the form group to align with images */
+  .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  label {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    width: 130px;
+    margin-right: 10px;
+  }
+
+  .form-control {
+    background-color: #f1f8e9;
+    border-radius: 8px;
+    border: 1px solid #b2dfdb;
+    padding: 8px 12px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .form-control::placeholder {
+    font-style: italic;
+  }
+
+  /* Button alignment */
+  .button-container {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 140px;
+    margin-top: 20px;
+  }
+
+</style>
+
+<!-- Form Section -->
+<br /><br />
+<h1 style="text-align: center; margin: 0px; color: #004d40; font-family: 'Roboto', sans-serif;">
+  <b>Get informed advice on fertilizer based on soil</b>
+</h1>
+<br />
+
+<!-- Parent flex container -->
+<div class="container-flex">
+  <div class="image-container">
+    <!-- Image 1 -->
+    <div class="image-box">
+      <img src="{{ url_for('static', filename='images/f1.jpg') }}" alt="fert1" class="image-left">
+    </div>
+    <!-- Image 2 -->
+    <div class="image-box">
+      <img src="{{ url_for('static', filename='images/f2.jpg') }}" alt="fert2" class="image-left">
+
+    </div>
+    <!-- Image 3 -->
+    <div class="image-box">
+      <img src="{{ url_for('static', filename='images/f3.jpg') }}" alt="fert3" class="image-left">
+    </div>
+  </div>
+
+  <div class="form-container">
+    <form method="POST" action="{{ url_for('fert_recommend') }}">
+      <div class="form-group">
+        <label for="Nitrogen"><b>Nitrogen</b></label>
+        <input
+          type="number"
+          class="form-control"
+          id="Nitrogen"
+          name="nitrogen"
+          placeholder="Enter the value (example: 50)"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="Phosphorous"><b>Phosphorous</b></label>
+        <input
+          type="number"
+          class="form-control"
+          id="Phosphorous"
+          name="phosphorous"
+          placeholder="Enter the value (example: 50)"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="Pottasium"><b>Potassium</b></label>
+        <input
+          type="number"
+          class="form-control"
+          id="Pottasium"
+          name="pottasium"
+          placeholder="Enter the value (example: 50)"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="crop"><b>Crop you want to grow</b></label>
+        <select
+          name="cropname"
+          class="form-control"
+          id="crop"
+          required
+        >
+          <option selected>Select crop</option>
+          <option>rice</option>
+          <option>maize</option>
+          <option>chickpea</option>
+          <option>kidneybeans</option>
+          <option>pigeonpeas</option>
+          <option>mothbeans</option>
+          <option>mungbean</option>
+          <option>blackgram</option>
+          <option>lentil</option>
+          <option>pomegranate</option>
+          <option>banana</option>
+          <option>mango</option>
+          <option>grapes</option>
+          <option>watermelon</option>
+          <option>muskmelon</option>
+          <option>apple</option>
+          <option>orange</option>
+          <option>papaya</option>
+          <option>coconut</option>
+          <option>cotton</option>
+          <option>jute</option>
+          <option>coffee</option>
+        </select>
+      </div>
+
+      <div class="button-container">
+        <button
+          type="submit"
+          class="btn btn-info"
+          style="
+            color: white;
+            background-color: #388e3c;
+            font-weight: bold;
+            width: 200px;
+            height: 50px;
+            border-radius: 12px;
+            font-size: 21px;
+          "
+        >
+          Predict
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

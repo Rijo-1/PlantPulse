@@ -1,0 +1,101 @@
+{% extends 'layout.html' %} 
+{% block body %}
+
+<style>
+  /* Set the page background color and global font */
+  html, body {
+    background-color: #e0f7fa;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Style for the header text */
+  .header-text {
+    text-align: center;
+    color: #004d40;
+    margin: 0px;
+    font-weight: 500;
+  }
+
+  /* Box container style */
+  .content-box {
+    width: 350px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #2d5b34; /* Green border */
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+  }
+
+  /* Style for the file input box */
+  .form-control-file {
+    font-weight: bold;
+    background-color: #f1f8e9;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  /* Style for the Predict button with full width and custom green color */
+  .btn-predict {
+    font-weight: bold;
+    background-color: #2d5b34;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 100%; /* Full width */
+    padding: 15px; /* Increase padding for height */
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Predict button hover effect */
+  .btn-predict:hover {
+    background-color: #2d5b34;
+  }
+
+  /* Style for preview image */
+  #output-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Style for "Please Upload The Image" text */
+  .content-box h2 {
+    color: #004d40;
+  }
+</style>
+
+<br /><br />
+<h1 class="header-text">
+  <b>Find out which disease has been caught by your plant</b>
+</h1>
+<br /><br>
+
+<!-- Content box with green border -->
+<div class="content-box">
+  <form class="form-signin" method="post" enctype="multipart/form-data">
+    <h2 class="h4 mb-3 font-weight-normal"><b>Please Upload The Image</b></h2>
+    <input type="file" name="file" class="form-control-file" id="inputfile" onchange="preview_image(event)">
+    <br><br>
+    <img id="output-image" class="rounded mx-auto d-block" />
+    <br><br>
+    <button class="btn btn-lg btn-predict" type="submit">Predict</button>
+  </form>
+</div>
+
+<script type="text/javascript">
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var output = document.getElementById('output-image');
+      output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>
+
+{% endblock %}
