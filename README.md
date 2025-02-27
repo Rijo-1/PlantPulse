@@ -95,27 +95,28 @@ PlantPulse/
 
 ## ✨ Contributors  
 <div align="center">
-  <figure style="display: inline-block; text-align: center; margin: 0 20px;">
+  <div style="display: inline-block; text-align: center; margin: 0 20px;">
     <a href="https://github.com/Riya-jalan">
-      <img src="https://github.com/Riya-jalan.png" width="70px" alt="Riya Jalan" style="border-radius: 50%;" title="Riya Jalan"/>
+      <img src="https://github.com/Riya-jalan.png" width="70px" alt="Riya Jalan" style="border-radius: 50%; display: block; margin: auto;" title="Riya Jalan"/>
     </a>
-    <figcaption>Riya Jalan</figcaption>
-  </figure>
-  
-  <figure style="display: inline-block; text-align: center; margin: 0 20px;">
+    <span style="display: block; margin-top: 5px;">Riya Jalan</span>
+  </div>
+
+  <div style="display: inline-block; text-align: center; margin: 0 20px;">
     <a href="https://github.com/Sameeksha0329">
-      <img src="https://github.com/Sameeksha0329.png" width="70px" alt="Sameeksha" style="border-radius: 50%;" title="Sameeksha"/>
+      <img src="https://github.com/Sameeksha0329.png" width="70px" alt="Sameeksha" style="border-radius: 50%; display: block; margin: auto;" title="Sameeksha"/>
     </a>
-    <figcaption>Sameeksha</figcaption>
-  </figure>
-  
-  <figure style="display: inline-block; text-align: center; margin: 0 20px;">
+    <span style="display: block; margin-top: 5px;">Sameeksha</span>
+  </div>
+
+  <div style="display: inline-block; text-align: center; margin: 0 20px;">
     <a href="https://github.com/Nish-037">
-      <img src="https://github.com/Nish-037.png" width="70px" alt="Nishvika" style="border-radius: 50%;" title="Nishvika"/>
+      <img src="https://github.com/Nish-037.png" width="70px" alt="Nishvika" style="border-radius: 50%; display: block; margin: auto;" title="Nishvika"/>
     </a>
-    <figcaption>Nishvika</figcaption>
-  </figure>
+    <span style="display: block; margin-top: 5px;">Nishvika</span>
+  </div>
 </div>
+
 
 
 
