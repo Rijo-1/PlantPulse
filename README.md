@@ -94,28 +94,29 @@ PlantPulse/
 ---
 
 ## ✨ Contributors  
-<div align="center">
-  <div style="display: inline-block; text-align: center; margin: 0 20px;">
+<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+  <div>
     <a href="https://github.com/Riya-jalan">
-      <img src="https://github.com/Riya-jalan.png" width="70px" alt="Riya Jalan" style="border-radius: 50%; display: block; margin: auto;" title="Riya Jalan"/>
+      <img src="https://github.com/Riya-jalan.png" width="70px" alt="Riya Jalan" style="border-radius: 50%;" title="Riya Jalan"/>
     </a>
-    <span style="display: block; margin-top: 5px;">Riya Jalan</span>
+    <div>Riya Jalan</div>
   </div>
 
-  <div style="display: inline-block; text-align: center; margin: 0 20px;">
+  <div>
     <a href="https://github.com/Sameeksha0329">
-      <img src="https://github.com/Sameeksha0329.png" width="70px" alt="Sameeksha" style="border-radius: 50%; display: block; margin: auto;" title="Sameeksha"/>
+      <img src="https://github.com/Sameeksha0329.png" width="70px" alt="Sameeksha" style="border-radius: 50%;" title="Sameeksha"/>
     </a>
-    <span style="display: block; margin-top: 5px;">Sameeksha</span>
+    <div>Sameeksha</div>
   </div>
 
-  <div style="display: inline-block; text-align: center; margin: 0 20px;">
+  <div>
     <a href="https://github.com/Nish-037">
-      <img src="https://github.com/Nish-037.png" width="70px" alt="Nishvika" style="border-radius: 50%; display: block; margin: auto;" title="Nishvika"/>
+      <img src="https://github.com/Nish-037.png" width="70px" alt="Nishvika" style="border-radius: 50%;" title="Nishvika"/>
     </a>
-    <span style="display: block; margin-top: 5px;">Nishvika</span>
+    <div>Nishvika</div>
   </div>
 </div>
+
 
 
 
