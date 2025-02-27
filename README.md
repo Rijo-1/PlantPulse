@@ -94,8 +94,19 @@ PlantPulse/
 ---
 
 ## ✨ Contributors  
-- [Riyajalan](https://github.com/Riya-jalan)  
-- [Sameeksha](https://github.com/Sameeksha0329)  
-- [Nishvika](https://github.com/Nish-037)  
+<div align="center">
+  <a href="https://github.com/Riya-jalan">
+    <img src="https://github.com/Riya-jalan.png" width="70px" alt="Riya Jalan" style="border-radius: 50%; margin: 0 20px;" title="Riya Jalan"/>
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/Sameeksha0329">
+    <img src="https://github.com/Sameeksha0329.png" width="70px" alt="Sameeksha" style="border-radius: 50%; margin: 0 20px;" title="Sameeksha"/>
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/Nish-037">
+    <img src="https://github.com/Nish-037.png" width="70px" alt="Nishvika" style="border-radius: 50%; margin: 0 20px;" title="Nishvika"/>
+  </a>
+</div>
+
 
 ---
